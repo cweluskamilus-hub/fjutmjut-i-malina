@@ -2,7 +2,10 @@
 var params = new URLSearchParams(window.location.search);
 
 function sendTo(url) {
-    location.href = url + ".html?" + params.toString();
+    // We remove the slash and add .html
+    // We use window.location.pathname to stay in the current folder safely
+    const repoPath = window.location.pathname.split('/').slice(0, -1).join('/');
+    window.location.href = repoPath + "/" + url + ".html?" + params.toString();
 }
 
 document.querySelectorAll(".bottom_element_grid").forEach((element) => {
@@ -33,3 +36,4 @@ function getMobileOperatingSystem() {
       document.querySelector(".bottom_bar").style.height = "70px"
 
 }
+
