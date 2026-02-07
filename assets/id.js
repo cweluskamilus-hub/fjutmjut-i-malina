@@ -1,5 +1,4 @@
 var params = new URLSearchParams(window.location.search);
-// Odzyskaj obraz z localStorage jeśli istnieje
 const savedImage = localStorage.getItem('userImage');
 if (savedImage) {
     params.set('image', savedImage);
@@ -10,16 +9,18 @@ document.querySelector(".login").addEventListener('click', () => {
 });
 
 var welcome = "Dzień dobry!";
-
 var date = new Date();
 if (date.getHours() >= 18){
-    welcome = "Dobry wieczór!"
+    welcome = "Dobry wieczór!";
 }
 document.querySelector(".welcome").innerHTML = welcome;
 
 function toHome(){
+    // Changed to direct .html link
     location.href = 'home.html?' + params.toString();
 }
+
+// ... rest of your password input logic remains the same ...
 
 var input = document.querySelector(".password_input");
 input.addEventListener("keypress", (event) => {
@@ -74,4 +75,5 @@ eye.addEventListener('click', () => {
         classlist.add("eye_close");
         input.value = original;
     }
+
 })
