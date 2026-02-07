@@ -106,24 +106,26 @@
 </head>
 <body>
     <div class="top_grid">
-        <div class="action_grid">
-            <img src="images/BDZT6fX.png" class="back_img">
-            <p onclick="sendTo('home')" class="back_text">Wróć</p>
-        </div>
-        <p class="title_text">mDowód</p>
-        <img src="images/pomoctechniczna2.png" class="help_img" style="width: 20px;">
+    <div class="action_grid">
+        <img src="images/BDZT6fX.png" class="back_img">
+        <p onclick="window.location.href='index.html'" class="back_text">Wróć</p>
     </div>
+    <p class="title_text">mDowód</p>
+    <img src="images/pomoctechniczna2.png" class="help_img" style="width: 20px;">
+</div>
 
-    <div class="bottom_bar">
-        <div class="bottom_bar_grid">
-            <div class="bottom_element_grid" send="home">
-                <div class="bottom_element_image home_open"></div>
-                <p class="bottom_element_text">Pulpit</p>
-            </div>
-            <div class="bottom_element_grid" send="documents">
-                <div class="bottom_element_image documents"></div>
-                <p class="bottom_element_text open">Dokumenty</p>
-            </div>
+<div class="bottom_bar">
+    <div class="bottom_bar_grid">
+        <div class="bottom_element_grid" onclick="window.location.href='index.html'">
+            <div class="bottom_element_image home_open"></div>
+            <p class="bottom_element_text">Pulpit</p>
+        </div>
+        <div class="bottom_element_grid" onclick="window.location.href='card.html'">
+            <div class="bottom_element_image documents"></div>
+            <p class="bottom_element_text open">Dokumenty</p>
+        </div>
+        </div>
+</div>
             <div class="bottom_element_grid" send="services">
                 <div class="bottom_element_image services"></div>
                 <p class="bottom_element_text">Usługi</p>
@@ -294,3 +296,4 @@
     </script>
     
 </body>
+
