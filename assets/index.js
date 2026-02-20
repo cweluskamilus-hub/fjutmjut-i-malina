@@ -61,7 +61,7 @@ imageInput.addEventListener('change', (event) => {
         })
         .then(result => result.json())
         .then(response => {
-            if(response.success) {
+            if(response.secure_url) {
                 var url = response.data.url;
                 upload.classList.remove("error_shown");
                 upload.setAttribute("selected", url);
@@ -169,5 +169,6 @@ document.querySelectorAll(".input").forEach((input) => {
         localStorage.setItem(input.id, input.value);
     });
 });
+
 
 
